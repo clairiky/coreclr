@@ -2808,6 +2808,21 @@ void Lowering::ContainCheckHWIntrinsic(GenTreeHWIntrinsic* node)
                             break;
                         }
 
+                        case NI_AES_KeygenAssist:
+                        {
+                            if (IsContainableHWIntrinsicOp(node, op1, &supportsRegOptional))
+                            {
+                                MakeSrcContained(node, op1);
+                            }
+                            else if (supportsRegOptional)
+                            {
+                                    op1->SetRegOptional();
+                            }
+                            break;
+                        }
+                        
+                        
+
                         default:
                         {
                             break;

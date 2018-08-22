@@ -465,6 +465,19 @@ INST3( extractps,    "extractps"   , 0, IUM_WR, 0, 0, SSE3A(0x17),  BAD_CODE, BA
 
 INST3(LAST_SSE4_INSTRUCTION, "LAST_SSE4_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
 
+//AES
+INST3(FIRST_AES_INSTRUCTION, "FIRST_AES_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
+INST3(aesdec,         "aesdec"          , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0xDE))   // Perform one round of an AES decryption flow
+INST3(aesdeclast,     "aesdeclast"      , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0xDF))   // Perform last round of an AES decryption flow
+INST3(aesenc,         "aesenc"          , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0xDC))   // Perform one round of an AES encryption flow
+INST3(aesenclast,     "aesenclast"      , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0xDD))   // Perform last round of an AES encryption flow
+INST3(aesimc,         "aesimc"          , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0xDB))   // Perform the AES InvMixColumn Transformation
+INST3(aeskeygenassist,"aeskeygenassist" , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE3A(0xDF))   // AES Round Key Generation Assist
+
+
+INST3(LAST_AES_INSTRUCTION, "LAST_AES_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
+
+
 INST3(FIRST_AVX_INSTRUCTION, "FIRST_AVX_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
 // AVX only instructions
 INST3( vbroadcastss, "broadcastss" , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, SSE38(0x18))   // Broadcast float value read from memory to entire ymm register
@@ -578,6 +591,9 @@ INST3(pext,           "pext",          0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, 
 INST3(LAST_BMI_INSTRUCTION, "LAST_BMI_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
 
 INST3(LAST_AVX_INSTRUCTION, "LAST_AVX_INSTRUCTION",  0, IUM_WR, 0, 0, BAD_CODE, BAD_CODE, BAD_CODE)
+
+
+
 
 // Scalar instructions in SSE4.2
 INST3( crc32,        "crc32"       , 0, IUM_WR, 0, 0, BAD_CODE,     BAD_CODE, PACK4(0xF2, 0x0F, 0x38, 0xF0))
