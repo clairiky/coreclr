@@ -145,6 +145,10 @@ bool emitter::IsDstDstSrcAVXInstruction(instruction ins)
         case INS_addss:
         case INS_addsubpd:
         case INS_addsubps:
+        case INS_aesdec:
+        case INS_aesdeclast:
+        case INS_aesenc:
+        case INS_aesenclast:
         case INS_andn:
         case INS_andnpd:
         case INS_andnps:

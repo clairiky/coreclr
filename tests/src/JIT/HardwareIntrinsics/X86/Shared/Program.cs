@@ -85,6 +85,7 @@ namespace JIT.HardwareIntrinsics.X86
             TestLibrary.TestFramework.LogInformation($"  SSE4.1:    {Sse41.IsSupported}");
             TestLibrary.TestFramework.LogInformation($"  SSE4.2:    {Sse42.IsSupported}");
             TestLibrary.TestFramework.LogInformation($"  SSSE3:     {Ssse3.IsSupported}");
+            TestLibrary.TestFramework.LogInformation($"  AES:       {Aes.IsSupported}");
             TestLibrary.TestFramework.LogInformation(string.Empty);
         }
 
