@@ -382,11 +382,6 @@ bool HWIntrinsicInfo::isFullyImplementedIsa(InstructionSet isa)
 {
     switch (isa)
     {
-        // These ISAs have no implementation
-        case InstructionSet_PCLMULQDQ:
-        {
-            return false;
-        }
 
         // These ISAs are partially implemented
         case InstructionSet_AVX2:
@@ -403,6 +398,7 @@ bool HWIntrinsicInfo::isFullyImplementedIsa(InstructionSet isa)
         case InstructionSet_FMA:
         case InstructionSet_LZCNT:
         case InstructionSet_POPCNT:
+        case InstructionSet_PCLMULQDQ:
         case InstructionSet_SSE:
         case InstructionSet_SSE2:
         case InstructionSet_SSE3:

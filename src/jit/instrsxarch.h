@@ -463,6 +463,10 @@ INST3(aesenc,           "aesenc",           IUM_WR, BAD_CODE,     BAD_CODE,     
 INST3(aesenclast,       "aesenclast",       IUM_WR, BAD_CODE,     BAD_CODE,     SSE38(0xDD),                             INS_Flags_IsDstDstSrcAVXInstruction)   // Perform last round of an AES encryption flow
 INST3(aesimc,           "aesimc",           IUM_WR, BAD_CODE,     BAD_CODE,     SSE38(0xDB),                             INS_FLAGS_None)   // Perform the AES InvMixColumn Transformation
 INST3(aeskeygenassist,  "aeskeygenassist",  IUM_WR, BAD_CODE,     BAD_CODE,     SSE3A(0xDF),                             INS_FLAGS_None)   // AES Round Key Generation Assist
+
+//PCLMULQDQ instructions
+INST3(pclmulqdq,        "pclmulqdq"       , IUM_WR, BAD_CODE,     BAD_CODE,     SSE3A(0x44),                             INS_Flags_IsDstDstSrcAVXInstruction)   // Perform a carry-less multiplication of two quadwords
+
 INST3(LAST_SSE4_INSTRUCTION, "LAST_SSE4_INSTRUCTION", IUM_WR, BAD_CODE, BAD_CODE, BAD_CODE, INS_FLAGS_None)
 
 INST3(FIRST_AVX_INSTRUCTION, "FIRST_AVX_INSTRUCTION", IUM_WR, BAD_CODE, BAD_CODE, BAD_CODE, INS_FLAGS_None)
